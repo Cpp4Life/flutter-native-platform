@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		12202B6029E469A700311CBE /* PressureStreamHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12202B5F29E469A700311CBE /* PressureStreamHandler.swift */; };
+		1293079729E6FDE20087EA7C /* ImagePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1293079629E6FDE20087EA7C /* ImagePickerController.swift */; };
 		1498D2341E8E89220040F4C2 /* GeneratedPluginRegistrant.m in Sources */ = {isa = PBXBuildFile; fileRef = 1498D2331E8E89220040F4C2 /* GeneratedPluginRegistrant.m */; };
 		3B3967161E833CAA004F5970 /* AppFrameworkInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3B3967151E833CAA004F5970 /* AppFrameworkInfo.plist */; };
 		74858FAF1ED2DC5600515810 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74858FAE1ED2DC5600515810 /* AppDelegate.swift */; };
@@ -31,6 +32,7 @@
 
 /* Begin PBXFileReference section */
 		12202B5F29E469A700311CBE /* PressureStreamHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PressureStreamHandler.swift; sourceTree = "<group>"; };
+		1293079629E6FDE20087EA7C /* ImagePickerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerController.swift; sourceTree = "<group>"; };
 		1498D2321E8E86230040F4C2 /* GeneratedPluginRegistrant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeneratedPluginRegistrant.h; sourceTree = "<group>"; };
 		1498D2331E8E89220040F4C2 /* GeneratedPluginRegistrant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeneratedPluginRegistrant.m; sourceTree = "<group>"; };
 		3B3967151E833CAA004F5970 /* AppFrameworkInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = AppFrameworkInfo.plist; path = Flutter/AppFrameworkInfo.plist; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 				74858FAE1ED2DC5600515810 /* AppDelegate.swift */,
 				74858FAD1ED2DC5600515810 /* Runner-Bridging-Header.h */,
 				12202B5F29E469A700311CBE /* PressureStreamHandler.swift */,
+				1293079629E6FDE20087EA7C /* ImagePickerController.swift */,
 			);
 			path = Runner;
 			sourceTree = "<group>";
@@ -212,6 +215,7 @@
 				74858FAF1ED2DC5600515810 /* AppDelegate.swift in Sources */,
 				12202B6029E469A700311CBE /* PressureStreamHandler.swift in Sources */,
 				1498D2341E8E89220040F4C2 /* GeneratedPluginRegistrant.m in Sources */,
+				1293079729E6FDE20087EA7C /* ImagePickerController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

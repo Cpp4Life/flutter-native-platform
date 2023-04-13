@@ -1,4 +1,5 @@
 import 'package:batterylevel/battery.dart';
+import 'package:batterylevel/camera.dart';
 import 'package:batterylevel/sensor.dart';
 import 'package:flutter/material.dart';
 
@@ -20,6 +21,7 @@ class MyApp extends StatelessWidget {
       routes: {
         NativeBattery.routeName: (context) => const NativeBattery(),
         NativePressure.routeName: (context) => const NativePressure(),
+        NativeCamera.routeName: (context) => const NativeCamera(),
       },
     );
   }
@@ -63,6 +65,15 @@ class _MyHomePageState extends State<MyHomePage> {
                 },
                 child: const Text(
                   'DEVICE PRESSURE',
+                  style: TextStyle(fontSize: 24),
+                ),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).pushNamed(NativeCamera.routeName);
+                },
+                child: const Text(
+                  'DEVICE CAMERA',
                   style: TextStyle(fontSize: 24),
                 ),
               )

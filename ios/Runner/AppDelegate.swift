@@ -44,6 +44,10 @@ import CoreMotion
       )
       pressureEventChannel.setStreamHandler(pressureStreamHanlder)
       
+      // third example
+      let imageChannel = ImageChannel(flutterViewController: controller)
+      imageChannel.setup()
+      
       //
       GeneratedPluginRegistrant.register(with: self)
       return super.application(application, didFinishLaunchingWithOptions: launchOptions)
