@@ -11,7 +11,7 @@ import CoreMotion
 
       let controller : FlutterViewController = window?.rootViewController as! FlutterViewController
       
-      // first example
+      // battery example
       let batteryChannel = FlutterMethodChannel(name: "dattr.flutter.dev/battery", binaryMessenger: controller.binaryMessenger)
       
       batteryChannel.setMethodCallHandler({
@@ -24,7 +24,7 @@ import CoreMotion
           }
       })
       
-      // second example
+      // sensor example
       let pressureChannel = FlutterMethodChannel(name: "dattr.flutter.dev/pressure", binaryMessenger: controller.binaryMessenger)
       
       pressureChannel.setMethodCallHandler({
@@ -44,7 +44,7 @@ import CoreMotion
       )
       pressureEventChannel.setStreamHandler(pressureStreamHanlder)
       
-      // third example
+      // image example
       let imageChannel = ImageChannel(flutterViewController: controller)
       imageChannel.setup()
       
