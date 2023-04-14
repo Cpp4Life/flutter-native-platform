@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+import 'battery_channel.dart';
+
 class NativeBattery extends StatefulWidget {
   static const routeName = '/battery';
 
@@ -11,14 +13,13 @@ class NativeBattery extends StatefulWidget {
 }
 
 class _NativeBatteryState extends State<NativeBattery> {
-  static const batteryChannel = MethodChannel('dattr.flutter.dev/battery');
-
   String _batteryLevel = 'Unknown status';
+  final Battery _battery = BatteryChannel();
 
   Future<void> _getBatteryLevel() async {
     String batteryLevel;
     try {
-      final int result = await batteryChannel.invokeMethod('getBatteryLevel');
+      final result = await _battery.getBattery();
       batteryLevel = 'Battery level at $result%';
     } on PlatformException catch (error) {
       batteryLevel = 'Failed to get battery level: ${error.message}';

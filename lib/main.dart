@@ -1,5 +1,5 @@
 import 'package:batterylevel/battery.dart';
-import 'package:batterylevel/camera.dart';
+import 'package:batterylevel/image_picker.dart';
 import 'package:batterylevel/sensor.dart';
 import 'package:flutter/material.dart';
 

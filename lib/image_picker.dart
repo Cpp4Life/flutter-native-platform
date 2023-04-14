@@ -20,7 +20,6 @@ class _NativeCameraState extends State<NativeCamera> {
   Future<void> captureImage(ImageSource imageSource) async {
     try {
       final imageFile = await _imagePicker.pickImage(source: imageSource);
-      print(imageFile);
       setState(() {
         _imageFile = imageFile;
       });
@@ -31,7 +30,6 @@ class _NativeCameraState extends State<NativeCamera> {
 
   Widget _buildImage() {
     if (_imageFile != null) {
-      print(_imageFile);
       return Image.file(_imageFile!);
     } else {
       return const Text(
