@@ -1,23 +1,19 @@
-import 'dart:ffi';
-
-import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 abstract class Battery {
-  Future<int?> getBattery();
+  Future<int> getBattery();
 }
 
 class BatteryChannel implements Battery {
   static const batteryChannel = MethodChannel('dattr.flutter.dev/battery');
 
   @override
-  Future<int?> getBattery() async {
-    final int result = await batteryChannel.invokeMethod('getBatteryLevel');
-    if (result is Int) {
+  Future<int> getBattery() async {
+    try {
+      final int result = await batteryChannel.invokeMethod('getBatteryLevel');
       return result;
-    } else if (result is FlutterError) {
-      throw result;
+    } on PlatformException {
+      rethrow;
     }
-    return null;
   }
 }
